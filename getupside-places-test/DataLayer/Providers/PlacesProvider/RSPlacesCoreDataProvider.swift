@@ -8,7 +8,7 @@
 import CoreLocation
 
 final class RSPlacesCoreDataProvider: RSPlacesProviderProtocol {
-    func places(near coordinates: CLLocationCoordinate2D, completion: @escaping (() -> Void)) {
+    func places(near coordinates: CLLocationCoordinate2D, completion: @escaping RSPlacesProviderCompletion) {
         
     }
 }

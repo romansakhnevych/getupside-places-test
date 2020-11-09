@@ -14,7 +14,7 @@ final class RSPlacesProvider: RSPlacesProviderProtocol {
     
     var isStored: Bool = false
     
-    func places(near coordinates: CLLocationCoordinate2D, completion: @escaping (() -> Void)) {
+    func places(near coordinates: CLLocationCoordinate2D, completion: @escaping RSPlacesProviderCompletion) {
         if isStored {
             placesCoreDataProvider.places(near: coordinates, completion: completion)
         } else {

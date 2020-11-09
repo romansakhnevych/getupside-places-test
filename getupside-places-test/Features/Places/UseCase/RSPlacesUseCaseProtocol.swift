@@ -12,6 +12,7 @@ protocol RSPlacesUseCaseProtocol {
     
     // Output
     var currentLocation: Observable<CLLocation> { get }
+    var places: MutableObservableArray<RSPlace> { get }
     
     // Input
     func loaded()

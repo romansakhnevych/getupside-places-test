@@ -16,6 +16,7 @@ final class RSPlacesUseCase: RSPlacesUseCaseProtocol {
     
     //MARK: Output
     var currentLocation = Observable<CLLocation>(CLLocation())
+    var places = MutableObservableArray<RSPlace>([])
     
     // MARK: Input
     func loaded() {
@@ -45,8 +46,15 @@ private extension RSPlacesUseCase {
 // MARK: Places
 private extension RSPlacesUseCase {
     func requestPlacesNearby(coordinates: CLLocationCoordinate2D) {
-        placesProvider.places(near: coordinates) {
-            
+        placesProvider.places(near: coordinates) { [weak self] result in
+            guard let self = self else {
+                //TODO: Throw error
+                return
+            }
+            switch result {
+            case .success(let places): self.places.replace(with: places)
+            case .failure(let error): print(error) // TODO: Throw error
+            }
         }
     }
 }

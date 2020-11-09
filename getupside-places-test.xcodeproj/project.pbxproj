@@ -23,6 +23,9 @@
 		3CC0B74A2557441100F71BC1 /* RSPlacesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7492557441100F71BC1 /* RSPlacesProvider.swift */; };
 		3CC0B74D2557E9D200F71BC1 /* RSLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B74C2557E9D200F71BC1 /* RSLocationService.swift */; };
 		3CC0B7562557E9F200F71BC1 /* RSLocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7552557E9F200F71BC1 /* RSLocationServiceProtocol.swift */; };
+		3CC0B7652559546700F71BC1 /* RSPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7642559546700F71BC1 /* RSPlace.swift */; };
+		3CC0B7802559754600F71BC1 /* RSPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B77E2559754600F71BC1 /* RSPlaceTableViewCell.swift */; };
+		3CC0B7812559754600F71BC1 /* RSPlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0B77F2559754600F71BC1 /* RSPlaceTableViewCell.xib */; };
 		B7162B14CA97C08C4519188C /* Pods_getupside_places_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B52B6137D9F7A543FE647D /* Pods_getupside_places_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +49,9 @@
 		3CC0B7492557441100F71BC1 /* RSPlacesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesProvider.swift; sourceTree = "<group>"; };
 		3CC0B74C2557E9D200F71BC1 /* RSLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSLocationService.swift; sourceTree = "<group>"; };
 		3CC0B7552557E9F200F71BC1 /* RSLocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSLocationServiceProtocol.swift; sourceTree = "<group>"; };
+		3CC0B7642559546700F71BC1 /* RSPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlace.swift; sourceTree = "<group>"; };
+		3CC0B77E2559754600F71BC1 /* RSPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlaceTableViewCell.swift; sourceTree = "<group>"; };
+		3CC0B77F2559754600F71BC1 /* RSPlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RSPlaceTableViewCell.xib; sourceTree = "<group>"; };
 		82B850EEF06AC52A86C69B41 /* Pods-getupside-places-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getupside-places-test.debug.xcconfig"; path = "Target Support Files/Pods-getupside-places-test/Pods-getupside-places-test.debug.xcconfig"; sourceTree = "<group>"; };
 		93B52B6137D9F7A543FE647D /* Pods_getupside_places_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_getupside_places_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,8 +119,9 @@
 		3CC0B6D72555AD8600F71BC1 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				3CC0B7542557E9DB00F71BC1 /* LocationService */,
-				3CC0B73F2557420C00F71BC1 /* PlacesProvider */,
+				3CC0B7632559545600F71BC1 /* Models */,
+				3CC0B7622559543B00F71BC1 /* Providers */,
+				3CC0B7612559543400F71BC1 /* Services */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		3CC0B6DA2555ADB600F71BC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3CC0B77D2559751C00F71BC1 /* Cells */,
 				3CC0B7362555FABD00F71BC1 /* Places.storyboard */,
 				3CC0B6E42555AE0000F71BC1 /* RSPlacesViewController.swift */,
 			);
@@ -182,6 +190,39 @@
 				3CC0B7552557E9F200F71BC1 /* RSLocationServiceProtocol.swift */,
 			);
 			path = LocationService;
+			sourceTree = "<group>";
+		};
+		3CC0B7612559543400F71BC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7542557E9DB00F71BC1 /* LocationService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3CC0B7622559543B00F71BC1 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B73F2557420C00F71BC1 /* PlacesProvider */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		3CC0B7632559545600F71BC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7642559546700F71BC1 /* RSPlace.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3CC0B77D2559751C00F71BC1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B77E2559754600F71BC1 /* RSPlaceTableViewCell.swift */,
+				3CC0B77F2559754600F71BC1 /* RSPlaceTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FDBEA33F8AA493ECF8A12E3D /* Pods */ = {
@@ -255,6 +296,7 @@
 			files = (
 				3CC0B7322555F74000F71BC1 /* LaunchScreen.storyboard in Resources */,
 				3CC0B7372555FABD00F71BC1 /* Places.storyboard in Resources */,
+				3CC0B7812559754600F71BC1 /* RSPlaceTableViewCell.xib in Resources */,
 				3CC0B6C72555AC0700F71BC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,12 +369,14 @@
 			files = (
 				3CC0B6F02555AF9800F71BC1 /* RSPlacesUseCaseProtocol.swift in Sources */,
 				3CC0B6BE2555AC0600F71BC1 /* AppDelegate.swift in Sources */,
+				3CC0B7802559754600F71BC1 /* RSPlaceTableViewCell.swift in Sources */,
 				3CC0B6E92555AE4000F71BC1 /* RSPlacesViewModelProtocol.swift in Sources */,
 				3CC0B7412557422C00F71BC1 /* RSPlacesProviderProtocol.swift in Sources */,
 				3CC0B6E52555AE0000F71BC1 /* RSPlacesViewController.swift in Sources */,
 				3CC0B7562557E9F200F71BC1 /* RSLocationServiceProtocol.swift in Sources */,
 				3CC0B747255743CB00F71BC1 /* RSPlacesApiProviderd.swift in Sources */,
 				3CC0B7442557432D00F71BC1 /* RSPlacesCoreDataProvider.swift in Sources */,
+				3CC0B7652559546700F71BC1 /* RSPlace.swift in Sources */,
 				3CC0B6F42555AFCB00F71BC1 /* RSPlacesUseCase.swift in Sources */,
 				3CC0B6C02555AC0600F71BC1 /* SceneDelegate.swift in Sources */,
 				3CC0B74D2557E9D200F71BC1 /* RSLocationService.swift in Sources */,

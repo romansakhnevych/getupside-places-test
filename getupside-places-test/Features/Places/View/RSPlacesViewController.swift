@@ -20,16 +20,12 @@ final class RSPlacesViewController: UIViewController {
         let viewModel = RSPlacesViewModel(useCase: useCase)
         return viewModel
     }()
-    
-    //MARK: Init
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        bindViewModel()
-    }
- 
+        
     //MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
+        setupUI()
         viewModel.loaded()
     }
 
@@ -39,19 +35,41 @@ final class RSPlacesViewController: UIViewController {
             guard let self = self else { return }
             self.mapView.camera = camera
         }
+        
+        _ = viewModel.placesMarkers.dropFirst(1).observeNext { [weak self] markers in
+            guard let self = self else { return }
+            markers.collection.forEach { $0.map = self.mapView }
+        }
+        
+        _ = viewModel.places.dropFirst(1).bind(to: tableView, cellType: RSPlaceTableViewCell.self) { cell, place in
+            cell.nameLabel.text = place.placeName
+            cell.addressLabel.text = place.shortAddress
+        }
+
     }
 }
 
 //MARK: UI Setup
-extension RSPlacesViewController {
+private extension RSPlacesViewController {
     func setupUI() {
-        
+        setupMapView()
+        setupTableView()
     }
 }
 
 //MARK: Map view
-extension RSPlacesViewController {
+private extension RSPlacesViewController {
     func setupMapView() {
         mapView.isMyLocationEnabled = true
+    }
+}
+
+//MARK: Table view
+private extension RSPlacesViewController {
+    func setupTableView() {
+        // This registration can be moved to extension but as we use this only in one place I leave it here
+        tableView.register(UINib(nibName: String(describing: RSPlaceTableViewCell.self), bundle: Bundle.main), forCellReuseIdentifier: String(describing: RSPlaceTableViewCell.self))
+        tableView.estimatedRowHeight = 95
+        tableView.rowHeight = UITableView.automaticDimension
     }
 }

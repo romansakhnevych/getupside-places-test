@@ -12,6 +12,8 @@ protocol RSPlacesViewModelProtocol {
     
     // Output
     var camera: Observable<GMSCameraPosition> { get }
+    var places: MutableObservableArray<RSPlace> { get }
+    var placesMarkers: MutableObservableArray<GMSMarker> { get }
     
     // Input
     func loaded()
