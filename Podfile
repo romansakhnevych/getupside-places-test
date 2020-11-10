@@ -6,5 +6,7 @@ target 'getupside-places-test' do
   use_frameworks!
 
   pod 'Bond'
+  pod 'ArcGIS-Runtime-SDK-iOS', '100.9'
+  pod 'GoogleMaps'
 
 end

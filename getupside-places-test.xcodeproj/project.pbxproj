@@ -3,29 +3,75 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C25EF97255AE50E00A42B6B /* RSError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C25EF96255AE50E00A42B6B /* RSError.swift */; };
 		3CC0B6BE2555AC0600F71BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6BD2555AC0600F71BC1 /* AppDelegate.swift */; };
 		3CC0B6C02555AC0600F71BC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6BF2555AC0600F71BC1 /* SceneDelegate.swift */; };
-		3CC0B6C22555AC0600F71BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6C12555AC0600F71BC1 /* ViewController.swift */; };
-		3CC0B6C52555AC0600F71BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0B6C32555AC0600F71BC1 /* Main.storyboard */; };
 		3CC0B6C72555AC0700F71BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0B6C62555AC0700F71BC1 /* Assets.xcassets */; };
-		3CC0B6CA2555AC0700F71BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0B6C82555AC0700F71BC1 /* LaunchScreen.storyboard */; };
+		3CC0B6E52555AE0000F71BC1 /* RSPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6E42555AE0000F71BC1 /* RSPlacesViewController.swift */; };
+		3CC0B6E92555AE4000F71BC1 /* RSPlacesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6E82555AE4000F71BC1 /* RSPlacesViewModelProtocol.swift */; };
+		3CC0B6EC2555AE5A00F71BC1 /* RSPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6EB2555AE5A00F71BC1 /* RSPlacesViewModel.swift */; };
+		3CC0B6F02555AF9800F71BC1 /* RSPlacesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6EF2555AF9800F71BC1 /* RSPlacesUseCaseProtocol.swift */; };
+		3CC0B6F42555AFCB00F71BC1 /* RSPlacesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B6F32555AFCB00F71BC1 /* RSPlacesUseCase.swift */; };
+		3CC0B7322555F74000F71BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0B6C82555AC0700F71BC1 /* LaunchScreen.storyboard */; };
+		3CC0B7372555FABD00F71BC1 /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0B7362555FABD00F71BC1 /* Places.storyboard */; };
+		3CC0B7412557422C00F71BC1 /* RSPlacesProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7402557422C00F71BC1 /* RSPlacesProviderProtocol.swift */; };
+		3CC0B7442557432D00F71BC1 /* RSPlacesCoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7432557432D00F71BC1 /* RSPlacesCoreDataProvider.swift */; };
+		3CC0B747255743CB00F71BC1 /* RSPlacesApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B746255743CB00F71BC1 /* RSPlacesApiProvider.swift */; };
+		3CC0B74A2557441100F71BC1 /* RSPlacesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7492557441100F71BC1 /* RSPlacesProvider.swift */; };
+		3CC0B74D2557E9D200F71BC1 /* RSLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B74C2557E9D200F71BC1 /* RSLocationService.swift */; };
+		3CC0B7562557E9F200F71BC1 /* RSLocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7552557E9F200F71BC1 /* RSLocationServiceProtocol.swift */; };
+		3CC0B7652559546700F71BC1 /* RSPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7642559546700F71BC1 /* RSPlace.swift */; };
+		3CC0B7802559754600F71BC1 /* RSPlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B77E2559754600F71BC1 /* RSPlaceTableViewCell.swift */; };
+		3CC0B7812559754600F71BC1 /* RSPlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CC0B77F2559754600F71BC1 /* RSPlaceTableViewCell.xib */; };
+		3CC0B78725598A6600F71BC1 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B78625598A6600F71BC1 /* NavigationRouter.swift */; };
+		3CC0B78A25598A8F00F71BC1 /* NavigationRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B78925598A8F00F71BC1 /* NavigationRoutes.swift */; };
+		3CC0B78D25598C3A00F71BC1 /* RSPlacesRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B78C25598C3A00F71BC1 /* RSPlacesRoutes.swift */; };
+		3CC0B79225598D4300F71BC1 /* RSPlacesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B79125598D4300F71BC1 /* RSPlacesRouter.swift */; };
+		3CC0B7A52559F6DB00F71BC1 /* RSPlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7A42559F6DB00F71BC1 /* RSPlaceDetailsViewController.swift */; };
+		3CC0B7B0255A88A400F71BC1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7AF255A88A400F71BC1 /* DataController.swift */; };
+		3CC0B7B4255A892F00F71BC1 /* getupside-places-test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B7B2255A892F00F71BC1 /* getupside-places-test.xcdatamodeld */; };
+		3CC0B802255A9A4C00F71BC1 /* RSPlacesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC0B801255A9A4C00F71BC1 /* RSPlacesRepository.swift */; };
+		3CE8DB90255A9DD400633554 /* PlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8DB8E255A9DD400633554 /* PlaceEntity.swift */; };
 		B7162B14CA97C08C4519188C /* Pods_getupside_places_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93B52B6137D9F7A543FE647D /* Pods_getupside_places_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		095BDB57E4B8E501FD4C8154 /* Pods-getupside-places-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getupside-places-test.release.xcconfig"; path = "Target Support Files/Pods-getupside-places-test/Pods-getupside-places-test.release.xcconfig"; sourceTree = "<group>"; };
+		3C25EF96255AE50E00A42B6B /* RSError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSError.swift; sourceTree = "<group>"; };
 		3CC0B6BA2555AC0600F71BC1 /* getupside-places-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "getupside-places-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC0B6BD2555AC0600F71BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CC0B6BF2555AC0600F71BC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CC0B6C12555AC0600F71BC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3CC0B6C42555AC0600F71BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CC0B6C62555AC0700F71BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CC0B6C92555AC0700F71BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3CC0B6CB2555AC0700F71BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC0B6E42555AE0000F71BC1 /* RSPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesViewController.swift; sourceTree = "<group>"; };
+		3CC0B6E82555AE4000F71BC1 /* RSPlacesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesViewModelProtocol.swift; sourceTree = "<group>"; };
+		3CC0B6EB2555AE5A00F71BC1 /* RSPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesViewModel.swift; sourceTree = "<group>"; };
+		3CC0B6EF2555AF9800F71BC1 /* RSPlacesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesUseCaseProtocol.swift; sourceTree = "<group>"; };
+		3CC0B6F32555AFCB00F71BC1 /* RSPlacesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesUseCase.swift; sourceTree = "<group>"; };
+		3CC0B7002555B31B00F71BC1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC0B7362555FABD00F71BC1 /* Places.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
+		3CC0B7402557422C00F71BC1 /* RSPlacesProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesProviderProtocol.swift; sourceTree = "<group>"; };
+		3CC0B7432557432D00F71BC1 /* RSPlacesCoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesCoreDataProvider.swift; sourceTree = "<group>"; };
+		3CC0B746255743CB00F71BC1 /* RSPlacesApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesApiProvider.swift; sourceTree = "<group>"; };
+		3CC0B7492557441100F71BC1 /* RSPlacesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesProvider.swift; sourceTree = "<group>"; };
+		3CC0B74C2557E9D200F71BC1 /* RSLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSLocationService.swift; sourceTree = "<group>"; };
+		3CC0B7552557E9F200F71BC1 /* RSLocationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSLocationServiceProtocol.swift; sourceTree = "<group>"; };
+		3CC0B7642559546700F71BC1 /* RSPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlace.swift; sourceTree = "<group>"; };
+		3CC0B77E2559754600F71BC1 /* RSPlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlaceTableViewCell.swift; sourceTree = "<group>"; };
+		3CC0B77F2559754600F71BC1 /* RSPlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RSPlaceTableViewCell.xib; sourceTree = "<group>"; };
+		3CC0B78625598A6600F71BC1 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		3CC0B78925598A8F00F71BC1 /* NavigationRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoutes.swift; sourceTree = "<group>"; };
+		3CC0B78C25598C3A00F71BC1 /* RSPlacesRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesRoutes.swift; sourceTree = "<group>"; };
+		3CC0B79125598D4300F71BC1 /* RSPlacesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesRouter.swift; sourceTree = "<group>"; };
+		3CC0B7A42559F6DB00F71BC1 /* RSPlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		3CC0B7AF255A88A400F71BC1 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		3CC0B7B3255A892F00F71BC1 /* getupside-places-test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "getupside-places-test.xcdatamodel"; sourceTree = "<group>"; };
+		3CC0B801255A9A4C00F71BC1 /* RSPlacesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPlacesRepository.swift; sourceTree = "<group>"; };
+		3CE8DB8E255A9DD400633554 /* PlaceEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceEntity.swift; sourceTree = "<group>"; };
 		82B850EEF06AC52A86C69B41 /* Pods-getupside-places-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-getupside-places-test.debug.xcconfig"; path = "Target Support Files/Pods-getupside-places-test/Pods-getupside-places-test.debug.xcconfig"; sourceTree = "<group>"; };
 		93B52B6137D9F7A543FE647D /* Pods_getupside_places_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_getupside_places_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,15 +117,206 @@
 		3CC0B6BC2555AC0600F71BC1 /* getupside-places-test */ = {
 			isa = PBXGroup;
 			children = (
+				3CC0B7002555B31B00F71BC1 /* Info.plist */,
+				3CC0B78425598A4500F71BC1 /* Common */,
+				3CC0B6D82555AD9000F71BC1 /* Features */,
+				3CC0B6D72555AD8600F71BC1 /* DataLayer */,
 				3CC0B6BD2555AC0600F71BC1 /* AppDelegate.swift */,
 				3CC0B6BF2555AC0600F71BC1 /* SceneDelegate.swift */,
-				3CC0B6C12555AC0600F71BC1 /* ViewController.swift */,
-				3CC0B6C32555AC0600F71BC1 /* Main.storyboard */,
-				3CC0B6C62555AC0700F71BC1 /* Assets.xcassets */,
-				3CC0B6C82555AC0700F71BC1 /* LaunchScreen.storyboard */,
-				3CC0B6CB2555AC0700F71BC1 /* Info.plist */,
+				3CC0B6D62555AD4700F71BC1 /* Resources */,
 			);
 			path = "getupside-places-test";
+			sourceTree = "<group>";
+		};
+		3CC0B6D62555AD4700F71BC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B6C62555AC0700F71BC1 /* Assets.xcassets */,
+				3CC0B6C82555AC0700F71BC1 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3CC0B6D72555AD8600F71BC1 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7AE255A878A00F71BC1 /* CoreData */,
+				3CC0B7632559545600F71BC1 /* Models */,
+				3CC0B7622559543B00F71BC1 /* Providers */,
+				3CC0B7612559543400F71BC1 /* Services */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		3CC0B6D82555AD9000F71BC1 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7A12559F58D00F71BC1 /* PlaceDetails */,
+				3CC0B6D92555AD9D00F71BC1 /* Places */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3CC0B6D92555AD9D00F71BC1 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B783255989E700F71BC1 /* Router */,
+				3CC0B6EE2555AF8100F71BC1 /* UseCase */,
+				3CC0B6E72555AE1100F71BC1 /* ViewModel */,
+				3CC0B6DA2555ADB600F71BC1 /* View */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		3CC0B6DA2555ADB600F71BC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B77D2559751C00F71BC1 /* Cells */,
+				3CC0B7362555FABD00F71BC1 /* Places.storyboard */,
+				3CC0B6E42555AE0000F71BC1 /* RSPlacesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CC0B6E72555AE1100F71BC1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B6E82555AE4000F71BC1 /* RSPlacesViewModelProtocol.swift */,
+				3CC0B6EB2555AE5A00F71BC1 /* RSPlacesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3CC0B6EE2555AF8100F71BC1 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B6EF2555AF9800F71BC1 /* RSPlacesUseCaseProtocol.swift */,
+				3CC0B6F32555AFCB00F71BC1 /* RSPlacesUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		3CC0B73F2557420C00F71BC1 /* PlacesProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7402557422C00F71BC1 /* RSPlacesProviderProtocol.swift */,
+				3CC0B7432557432D00F71BC1 /* RSPlacesCoreDataProvider.swift */,
+				3CC0B746255743CB00F71BC1 /* RSPlacesApiProvider.swift */,
+				3CC0B7492557441100F71BC1 /* RSPlacesProvider.swift */,
+			);
+			path = PlacesProvider;
+			sourceTree = "<group>";
+		};
+		3CC0B7542557E9DB00F71BC1 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B74C2557E9D200F71BC1 /* RSLocationService.swift */,
+				3CC0B7552557E9F200F71BC1 /* RSLocationServiceProtocol.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
+		3CC0B7612559543400F71BC1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7542557E9DB00F71BC1 /* LocationService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3CC0B7622559543B00F71BC1 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B73F2557420C00F71BC1 /* PlacesProvider */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		3CC0B7632559545600F71BC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7642559546700F71BC1 /* RSPlace.swift */,
+				3C25EF96255AE50E00A42B6B /* RSError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3CC0B77D2559751C00F71BC1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B77E2559754600F71BC1 /* RSPlaceTableViewCell.swift */,
+				3CC0B77F2559754600F71BC1 /* RSPlaceTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3CC0B783255989E700F71BC1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B78C25598C3A00F71BC1 /* RSPlacesRoutes.swift */,
+				3CC0B79125598D4300F71BC1 /* RSPlacesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3CC0B78425598A4500F71BC1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B78525598A5200F71BC1 /* Router */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3CC0B78525598A5200F71BC1 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B78625598A6600F71BC1 /* NavigationRouter.swift */,
+				3CC0B78925598A8F00F71BC1 /* NavigationRoutes.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3CC0B7A12559F58D00F71BC1 /* PlaceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7A22559F59C00F71BC1 /* View */,
+			);
+			path = PlaceDetails;
+			sourceTree = "<group>";
+		};
+		3CC0B7A22559F59C00F71BC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B7A42559F6DB00F71BC1 /* RSPlaceDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3CC0B7AE255A878A00F71BC1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B800255A9A2F00F71BC1 /* Repositories */,
+				3CC0B7B6255A8B0F00F71BC1 /* Entities */,
+				3CC0B7AF255A88A400F71BC1 /* DataController.swift */,
+				3CC0B7B2255A892F00F71BC1 /* getupside-places-test.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3CC0B7B6255A8B0F00F71BC1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3CE8DB8E255A9DD400633554 /* PlaceEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3CC0B800255A9A2F00F71BC1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3CC0B801255A9A4C00F71BC1 /* RSPlacesRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		FDBEA33F8AA493ECF8A12E3D /* Pods */ = {
@@ -88,7 +325,6 @@
 				82B850EEF06AC52A86C69B41 /* Pods-getupside-places-test.debug.xcconfig */,
 				095BDB57E4B8E501FD4C8154 /* Pods-getupside-places-test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -104,6 +340,7 @@
 				3CC0B6B72555AC0600F71BC1 /* Frameworks */,
 				3CC0B6B82555AC0600F71BC1 /* Resources */,
 				8C4666F15A7E4CA0273C19F8 /* [CP] Embed Pods Frameworks */,
+				DA4FFA17E6379019F9A082E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,9 +388,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC0B6CA2555AC0700F71BC1 /* LaunchScreen.storyboard in Resources */,
+				3CC0B7322555F74000F71BC1 /* LaunchScreen.storyboard in Resources */,
+				3CC0B7372555FABD00F71BC1 /* Places.storyboard in Resources */,
+				3CC0B7812559754600F71BC1 /* RSPlaceTableViewCell.xib in Resources */,
 				3CC0B6C72555AC0700F71BC1 /* Assets.xcassets in Resources */,
-				3CC0B6C52555AC0600F71BC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +413,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-getupside-places-test/Pods-getupside-places-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA4FFA17E6379019F9A082E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-getupside-places-test/Pods-getupside-places-test-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-getupside-places-test/Pods-getupside-places-test-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-getupside-places-test/Pods-getupside-places-test-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD89159F4047DF797E4B9167 /* [CP] Check Pods Manifest.lock */ = {
@@ -206,23 +461,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC0B6C22555AC0600F71BC1 /* ViewController.swift in Sources */,
+				3CE8DB90255A9DD400633554 /* PlaceEntity.swift in Sources */,
+				3CC0B6F02555AF9800F71BC1 /* RSPlacesUseCaseProtocol.swift in Sources */,
 				3CC0B6BE2555AC0600F71BC1 /* AppDelegate.swift in Sources */,
+				3CC0B802255A9A4C00F71BC1 /* RSPlacesRepository.swift in Sources */,
+				3CC0B7802559754600F71BC1 /* RSPlaceTableViewCell.swift in Sources */,
+				3CC0B6E92555AE4000F71BC1 /* RSPlacesViewModelProtocol.swift in Sources */,
+				3CC0B7B4255A892F00F71BC1 /* getupside-places-test.xcdatamodeld in Sources */,
+				3CC0B7412557422C00F71BC1 /* RSPlacesProviderProtocol.swift in Sources */,
+				3CC0B6E52555AE0000F71BC1 /* RSPlacesViewController.swift in Sources */,
+				3CC0B7562557E9F200F71BC1 /* RSLocationServiceProtocol.swift in Sources */,
+				3CC0B7B0255A88A400F71BC1 /* DataController.swift in Sources */,
+				3CC0B747255743CB00F71BC1 /* RSPlacesApiProvider.swift in Sources */,
+				3CC0B78725598A6600F71BC1 /* NavigationRouter.swift in Sources */,
+				3CC0B78A25598A8F00F71BC1 /* NavigationRoutes.swift in Sources */,
+				3CC0B7442557432D00F71BC1 /* RSPlacesCoreDataProvider.swift in Sources */,
+				3CC0B7652559546700F71BC1 /* RSPlace.swift in Sources */,
+				3CC0B6F42555AFCB00F71BC1 /* RSPlacesUseCase.swift in Sources */,
 				3CC0B6C02555AC0600F71BC1 /* SceneDelegate.swift in Sources */,
+				3CC0B78D25598C3A00F71BC1 /* RSPlacesRoutes.swift in Sources */,
+				3CC0B79225598D4300F71BC1 /* RSPlacesRouter.swift in Sources */,
+				3C25EF97255AE50E00A42B6B /* RSError.swift in Sources */,
+				3CC0B7A52559F6DB00F71BC1 /* RSPlaceDetailsViewController.swift in Sources */,
+				3CC0B74D2557E9D200F71BC1 /* RSLocationService.swift in Sources */,
+				3CC0B74A2557441100F71BC1 /* RSPlacesProvider.swift in Sources */,
+				3CC0B6EC2555AE5A00F71BC1 /* RSPlacesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3CC0B6C32555AC0600F71BC1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CC0B6C42555AC0600F71BC1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3CC0B6C82555AC0700F71BC1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,11 +626,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LNJ389AU78;
 				INFOPLIST_FILE = "getupside-places-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sakhnievych.getupside-places-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -376,11 +648,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = "getupside-places-test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sakhnievych.getupside-places-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -410,6 +684,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3CC0B7B2255A892F00F71BC1 /* getupside-places-test.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3CC0B7B3255A892F00F71BC1 /* getupside-places-test.xcdatamodel */,
+			);
+			currentVersion = 3CC0B7B3255A892F00F71BC1 /* getupside-places-test.xcdatamodel */;
+			path = "getupside-places-test.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3CC0B6B22555AC0600F71BC1 /* Project object */;
 }
