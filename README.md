@@ -1,5 +1,5 @@
 # getupside-places-test
-#### Prerequisites to setup and run a project:
+### Prerequisites to setup and run a project:
 1. Install Xcode 12.0
 2. Install Cocoapods
 
