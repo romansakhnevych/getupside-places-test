@@ -17,6 +17,11 @@ final class RSPlacesApiProvider: RSPlacesProviderProtocol {
     }()
     
     private var currentSearch: AGSCancelable?
+    private var repository: RSPlacesRepository
+    
+    init(repository: RSPlacesRepository) {
+        self.repository = repository
+    }
     
     /// Provide places from ArcGIS service
     func places(near coordinates: CLLocationCoordinate2D, completion: @escaping RSPlacesProviderCompletion) {
@@ -32,7 +37,7 @@ final class RSPlacesApiProvider: RSPlacesProviderProtocol {
         parameters.categories = ["Food"]
         parameters.resultAttributeNames.append("*")
         
-        currentSearch = locatorTask.geocode(withSearchText: "", parameters: parameters) { result, error in
+        currentSearch = locatorTask.geocode(withSearchText: "", parameters: parameters) { [weak self] result, error in
             if let error = error {
                 completion(.failure(error))
             }
@@ -49,7 +54,7 @@ final class RSPlacesApiProvider: RSPlacesProviderProtocol {
                     places.append(place)
                 }
             }
-            
+            self?.repository.save(places)
             completion(.success(places))
         }
     }

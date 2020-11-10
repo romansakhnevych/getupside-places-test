@@ -44,6 +44,44 @@ struct RSPlace {
         self.streetName = dictionary[MappingKeys.StName.rawValue] as? String
         self.buildingNumber = dictionary[MappingKeys.AddNum.rawValue] as? String
     }
+    
+    init() {
+        self.shortLabel = nil
+        self.shortAddress = nil
+        self.city = nil
+        self.coordinate = nil
+        self.postal = nil
+        self.region = nil
+        self.placeName = nil
+        self.url = nil
+        self.longLabel = nil
+        self.placeType = nil
+        self.zone = nil
+        self.country = nil
+        self.streetType = nil
+        self.streetName = nil
+        self.buildingNumber = nil
+    }
+    
+    init(placeEntity: PlaceEntity) {
+        self.buildingNumber = placeEntity.buildingNumber
+        self.city = placeEntity.city
+        self.country = placeEntity.country
+        if placeEntity.latitude != 0 && placeEntity.longitude != 0 {
+            self.coordinate = CLLocationCoordinate2D(latitude: placeEntity.latitude, longitude: placeEntity.longitude)
+        }
+        self.longLabel = placeEntity.longLabel
+        self.placeName = placeEntity.placeName
+        self.placeType = placeEntity.placeType
+        self.postal = placeEntity.postal
+        self.region = placeEntity.region
+        self.shortAddress = placeEntity.shortAddress
+        self.streetName = placeEntity.streetName
+        self.streetType = placeEntity.streetType
+        self.url = placeEntity.url
+        self.zone = placeEntity.zoneType
+    }
+    
 }
 
 

@@ -8,7 +8,8 @@
 import Bond
 import GoogleMaps
 
-final class RSPlacesViewModel: RSPlacesViewModelProtocol {
+final class RSPlacesViewModel: NSObject, RSPlacesViewModelProtocol {
+    
     
     // MARK: Constants
     private let defaultCameraZoom: Float = 14
@@ -20,15 +21,19 @@ final class RSPlacesViewModel: RSPlacesViewModelProtocol {
     var camera = Observable<GMSCameraPosition>(GMSCameraPosition(latitude: 0, longitude: 0, zoom: 0))
     var places = MutableObservableArray<RSPlace>([])
     var placesMarkers = MutableObservableArray<GMSMarker>([])
+    var selectedPlace = Observable<RSPlace>(RSPlace())
+    var shouldShowSpinner = Observable<Bool>(false)
     
     // MARK: Input
     func loaded() {
+        shouldShowSpinner.value = true
         useCase.loaded()
     }
     
     // MARK: Init
     init(useCase: RSPlacesUseCaseProtocol) {
         self.useCase = useCase
+        super.init()
         bindUseCase()
     }
     
@@ -55,8 +60,26 @@ final class RSPlacesViewModel: RSPlacesViewModelProtocol {
                 return marker
             }
             self.placesMarkers.replace(with: markers)
+            self.shouldShowSpinner.value = false
         }
     }
 }
 
+//MARK: Table view delegate
+extension RSPlacesViewModel {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let place = places.collection[indexPath.row]
+        selectedPlace.value = place
+    }
+}
+
+//MARK: Google map delegate
+extension RSPlacesViewModel {
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        if let placeIndex = placesMarkers.collection.firstIndex(of: marker) {
+            let place = places.collection[placeIndex]
+            selectedPlace.value = place
+        }
+    }
+}
 

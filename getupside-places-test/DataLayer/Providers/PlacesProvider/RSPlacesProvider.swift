@@ -9,13 +9,19 @@ import CoreLocation
 
 final class RSPlacesProvider: RSPlacesProviderProtocol {
     
-    var placesApiProvider: RSPlacesProviderProtocol = RSPlacesApiProvider()
-    var placesCoreDataProvider: RSPlacesProviderProtocol = RSPlacesCoreDataProvider()
+    var placesApiProvider: RSPlacesProviderProtocol
+    var placesCoreDataProvider: RSPlacesProviderProtocol
     
-    var isStored: Bool = false
+    var repository: RSPlacesRepository
+    
+    init(repository: RSPlacesRepository = RSPlacesRepository()) {
+        self.repository = repository
+        self.placesApiProvider = RSPlacesApiProvider(repository: repository)
+        self.placesCoreDataProvider = RSPlacesCoreDataProvider(repository: repository)
+    }
     
     func places(near coordinates: CLLocationCoordinate2D, completion: @escaping RSPlacesProviderCompletion) {
-        if isStored {
+         if repository.isSavedLocaly {
             placesCoreDataProvider.places(near: coordinates, completion: completion)
         } else {
             placesApiProvider.places(near: coordinates, completion: completion)

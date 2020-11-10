@@ -8,12 +8,14 @@
 import Bond
 import GoogleMaps
 
-protocol RSPlacesViewModelProtocol {
+protocol RSPlacesViewModelProtocol: GMSMapViewDelegate, UITableViewDelegate {
     
     // Output
     var camera: Observable<GMSCameraPosition> { get }
     var places: MutableObservableArray<RSPlace> { get }
     var placesMarkers: MutableObservableArray<GMSMarker> { get }
+    var selectedPlace: Observable<RSPlace> { get }
+    var shouldShowSpinner: Observable<Bool> { get }
     
     // Input
     func loaded()
